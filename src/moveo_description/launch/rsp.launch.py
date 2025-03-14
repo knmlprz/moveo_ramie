@@ -10,12 +10,11 @@ from launch_ros.actions import Node
 def generate_launch_description():
     # Check if we're told to use sim time
     use_sim_time = LaunchConfiguration('use_sim_time')
-    use_ros2_control = LaunchConfiguration('use_ros2_control')
 
     # Process the URDF file
     pkg_path = os.path.join(get_package_share_directory('moveo_description'),)
-    xacro_file = os.path.join(pkg_path, 'description', 'moveo_urdf.urdf')
-    robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=', use_ros2_control, ' sim_mode:=', use_sim_time])
+    xacro_file = os.path.join(pkg_path, 'description', 'moveo.urdf.xacro')
+    robot_description_config = Command(['xacro ', xacro_file, ' sim_mode:=', use_sim_time])
 
     # Create a robot_state_publisher node
     params = {'robot_description': robot_description_config, 'use_sim_time': use_sim_time}
@@ -26,12 +25,12 @@ def generate_launch_description():
         parameters=[params]
     )
 
-    node_joint_state_publisher = Node(
-        package='joint_state_publisher_gui',
-        executable='joint_state_publisher_gui',
-        name='joint_state_publisher',
-        output='screen',
-    )
+    # node_joint_state_publisher = Node(
+    #     package='joint_state_publisher_gui',
+    #     executable='joint_state_publisher_gui',
+    #     name='joint_state_publisher',
+    #     output='screen',
+    # )
 
     # Launch!
     return LaunchDescription([
@@ -39,11 +38,6 @@ def generate_launch_description():
             'use_sim_time',
             default_value='false',
             description='Use sim time if true'),
-        DeclareLaunchArgument(
-            'use_ros2_control',
-            default_value='true',
-            description='Use ros2_control if true'),
-
         node_robot_state_publisher,
-        node_joint_state_publisher
+        # node_joint_state_publisher
     ])

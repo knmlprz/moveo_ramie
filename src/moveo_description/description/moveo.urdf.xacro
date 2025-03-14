@@ -1,7 +1,6 @@
 <?xml version='1.0'?>
-<robot
-  name="moveo_urdf">	
-
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="moveo_urdf">
+  <xacro:include filename="gazebo.xacro" />
   <link
     name="base_link">
     <visual>
@@ -360,15 +359,10 @@
       <origin
         xyz="-0.0063957 -0.0033021 -0.00082714"
         rpy="0 0 0" />
-      <mass
-        value="0.0048997" />
-      <inertia
-        ixx="2.0097E-09"
-        ixy="-3.0673E-09"
-        ixz="-6.3297E-10"
-        iyy="4.9761E-09"
-        iyz="-3.9668E-10"
-        izz="6.8221E-09" />
+      <mass value="0.0049" />
+      <inertia ixx="2.0E-08" ixy="0.0" ixz="0.0"
+               iyy="5.0E-08" iyz="0.0"
+               izz="7.0E-08" />
     </inertial>
     <visual>
       <origin
@@ -594,15 +588,10 @@
       <origin
         xyz="-0.017611 0.00080352 -1.2115E-11"
         rpy="0 0 0" />
-      <mass
-        value="0.0018597" />
-      <inertia
-        ixx="2.3199E-09"
-        ixy="3.1597E-09"
-        ixz="3.9677E-16"
-        iyy="7.8256E-08"
-        iyz="-2.0327E-16"
-        izz="8.0576E-08" />
+      <mass value="0.0019" />
+      <inertia ixx="2.3E-08" ixy="0.0" ixz="0.0"
+               iyy="8.0E-08" iyz="0.0"
+               izz="8.1E-08" />
     </inertial>
     <visual>
       <origin
@@ -653,15 +642,10 @@
       <origin
         xyz="0.017611 0.00067852 -1.3978E-11"
         rpy="0 0 0" />
-      <mass
-        value="0.0018597" />
-      <inertia
-        ixx="2.3199E-09"
-        ixy="-3.1597E-09"
-        ixz="-4.5779E-16"
-        iyy="7.8256E-08"
-        iyz="-2.26E-16"
-        izz="8.0576E-08" />
+      <mass value="0.0019" />
+      <inertia ixx="2.3E-08" ixy="0.0" ixz="0.0"
+               iyy="8.0E-08" iyz="0.0"
+               izz="8.1E-08" />
     </inertial>
     <visual>
       <origin
@@ -706,34 +690,35 @@
       velocity="1" />
     <mimic joint="Gripper_Idol_Gear_Joint" multiplier="1" offset="0"/> 
   </joint>
-  <!--
-  <gazebo>
-    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
-      joint="Gripper_Idol_Gear_Joint"
-      mimicJoint="Pivot_Arm_Gripper_Idol_Joint"
-      multiplier="1"
-      offset="0"
-    </plugin>
-    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
-      joint="Gripper_Servo_Gear_Joint"
-      mimicJoint="Pivot_Arm_Gripper_Servo_Joint"
-      multiplier="1"
-      offset="0"
-    </plugin>
-    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
-      joint="Gripper_Servo_Gear_Joint"
-      mimicJoint="Tip_Gripper_Servo_Joint
-      multiplier="1"
-      offset="0"
-    </plugin>
-    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
-      joint="Gripper_Idol_Gear_Joint"
-      mimicJoint="Tip_Gripper_Idol_Joint
-      multiplier="-1"
-      offset="0"
-    </plugin>
-  </gazebo>
-  -->
+
+<!--  <gazebo>-->
+<!--    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">-->
+<!--      joint="Gripper_Idol_Gear_Joint"-->
+<!--      mimicJoint="Pivot_Arm_Gripper_Idol_Joint"-->
+<!--      multiplier="1"-->
+<!--      offset="0"-->
+<!--    </plugin>-->
+<!--    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">-->
+<!--      joint="Gripper_Servo_Gear_Joint"-->
+<!--      mimicJoint="Pivot_Arm_Gripper_Servo_Joint"-->
+<!--      multiplier="1"-->
+<!--      offset="0"-->
+<!--    </plugin>-->
+<!--    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">-->
+<!--      <joint>Gripper_Servo_Gear_Joint</joint>-->
+<!--      <mimicJoint>Tip_Gripper_Servo_Joint</mimicJoint>-->
+<!--      <multiplier>1</multiplier>-->
+<!--      <offset>0</offset>-->
+<!--    </plugin>-->
+<!--    <plugin name="MimicJointPlugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">-->
+<!--      <joint>Gripper_Idol_Gear_Joint</joint>-->
+<!--      <mimicJoint>Tip_Gripper_Idol_Joint</mimicJoint>-->
+<!--      <multiplier>-1</multiplier>-->
+<!--      <offset>0</offset>-->
+<!--    </plugin>-->
+<!--    -->
+<!--  </gazebo>-->
+
 </robot>
 
 
