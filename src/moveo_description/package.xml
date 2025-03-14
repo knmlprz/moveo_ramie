@@ -7,6 +7,16 @@
   <maintainer email="fillio00@wp.pl">walkowiczf</maintainer>
   <license>Apache-2.0</license>
 
+  <!-- Required dependencies -->
+  <depend>ros2launch</depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>ament_index_python</depend>
+  <depend>xacro</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>urdf</depend>
+  <depend>joint_state_publisher_gui</depend>
+
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
