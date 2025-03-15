@@ -1,0 +1,56 @@
+joint_limits:
+  Gripper_Idol_Gear_Joint:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Gripper_Servo_Gear_Joint:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Joint_1.0:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Joint_2:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Joint_3:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Joint_4:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Joint_5:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Pivot_Arm_Gripper_Idol_Joint:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Pivot_Arm_Gripper_Servo_Joint:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Tip_Gripper_Idol_Joint:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
+  Tip_Gripper_Servo_Joint:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0.0
